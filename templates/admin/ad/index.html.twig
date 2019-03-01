@@ -1,0 +1,42 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration des produits{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <h3 class="my-5">Gestion des prestations / produits</h1>
+
+    <a href="{{ path('admin_products_create') }}" class="btn btn-secondary mb-2">Ajouter un nouveau produit</a>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Descritpion</th>
+                <th>Durée</th>
+                <th>Prix</th>
+                <th>Catégorie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.duration | date('H:i:s') }}</td>
+                <td>{{ product.price }}&euro;</td>
+                <td>{{ product.category }}</td>
+                <td>
+                    <a href="{{ path('admin_products_edit', {'slug': product.slug}) }}" class="btn btn-primary mb-2"><i class="fas fa-edit"></i></a>
+                    <a href="{{ path('admin_products_delete', {'slug': product.slug}) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

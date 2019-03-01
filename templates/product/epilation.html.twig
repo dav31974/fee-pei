@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La fée péi / Epilation{% endblock %}
+
+{% block body %}
+{% include 'product/_cover_product.html.twig' %}
+
+ <div class="container">
+        <h4 class="text-center my-5">Epilations</h4>
+        <h5 class="text-center mb-5">La fée péi vous propose deux types de cire au choix:</h5>
+        <div class="row mb-5">
+            <div class="col-md-8">
+                <div class="bgcireclassic card p-2 m-2">
+                    <h5>Cire Classique:</h5>
+                    <p>Cire Calendula bio </p>
+                </div>
+                <div class="bgcireepilo card p-2 m-2">
+                    <h5>Cire Epiloderm</h5>
+                    <p>Cire à la résine de pin 100% naturelle fabriqué en france, elle s'adapte à toutes les zones du corps. <br>Idéale pour les peaux sensibles à la chaleur et pour les problèmes veineux.</p>
+                
+                    <h6>Avantages:</h6>
+                    <ul>
+                        <li>Confort</li>
+                        <li>Douceur</li>
+                        <li>Hygienne d'une cire et d'une spatule à usage unique</li>
+                        <li>Effet peeling immmédiat</li>
+                        <li>Absence de poils sous peau</li>
+                        <li>Diminution prigressive et durable du système pileux</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bgconseil card p-2 m-2">
+                    <h5>Conseils:</h5>
+                    <p>Utiler le gommage épiloderm une fois par semaine pour activer le renouvellement cellulaiure et purifier la peau tout en  l'hydratant <br>En complément du gommage, il est conseillé d'hydrater sa peau avec le lait corps Epiloderm: Celui-ci a un fort pouvoir hydratant avec un actif végétal anti-repusse. <br>Il s'utilise sur toutes les zones du corps.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            {% include 'product/_product.html.twig' %}
+        </div>
+ </div>
+       
+{% endblock %}

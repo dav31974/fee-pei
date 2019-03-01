@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block body %}
+
+
+ <div class="container my-5">
+        <h4 class="text-center">{{ product.title }}</h4>
+        <div class="row my-5 p-5 showcontain">
+            <div class="col-md-6 my-3">
+                <p>
+                {{ product.description | nl2br() }}
+                </p>
+
+                <div class="card border-secondary" style="max-width: 20rem;">
+                    <div class="card-header">Infos produit:</div>
+                    <div class="card-body">
+                        <h6 class="card-title">Prix : {{ product.price }}&euro;</h6>
+                        <p class="card-text">Durée de la prestation :<br> {{ product.duration | date("H:i") }} Heure(s)</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="col-md-6 image-show" style="background-image: url(/uploads/{{ product.cover }})"></div>
+        </div>
+ </div>
+       
+{% endblock %}

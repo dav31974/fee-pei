@@ -1,0 +1,17 @@
+{% for product in products %}
+                <div class="col-md-4">
+                    <div class="card bg-light mb-3 davcardshadow">
+                        <div class="card-header text-center">
+                            <h5><strong>{{ product.title }}</strong></h5> <br> <strong>{{ product.price }}&euro;</strong> / {{ product.duration | date('H:i') }} heures
+                        </div>
+
+                        <div class="vignette" style="background-image: url(/uploads/{{ product.cover }}); height: 250px"></div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                {{ product.description | truncate(70) }}
+                            </p>
+                            <a href="{{ path('products_show', {'slug': product.slug}) }}" class="btn btn-secondary">En savoir plus !</a>
+                        </div>
+                    </div>
+                </div>
+{% endfor %}

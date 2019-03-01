@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La fée péi / Regard{% endblock %}
+
+{% block body %}
+{% include 'product/_cover_product.html.twig' %}
+
+ <div class="container">
+        <h4 class="text-center my-5">Beauté du regard</h4>
+        <div class="row">
+            {% include 'product/_product.html.twig' %}
+        </div>
+ </div>
+       
+{% endblock %}

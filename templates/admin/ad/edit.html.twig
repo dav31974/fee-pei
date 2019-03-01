@@ -1,0 +1,22 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Modification du produit / prestation{% endblock %}
+
+{% block body %}
+    
+    <div class="container mt-3 mb-3 text-center">
+        
+            <h3 class="h1 mt-5 mb-4">Modification du produit / prestation ( {{ product.title }} )</h3>
+            <div class="container text-left">
+                {{ form_start(form) }}
+
+                {{ form_widget(form) }}
+
+                <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+
+                {{ form_end(form) }}
+            </div>
+
+
+    </div>
+{% endblock %}

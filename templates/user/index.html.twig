@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+
+
+ <div class="container">
+        <h4 class="text-center my-5">Mon Profil / Mon compte</h4>
+        <div class="row my-5">
+              <div class="col-md-2">&nbsp;</div>
+              <div class="col-md-4">
+                     <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+                            <div class="card-header"><h5 class="h2">{{ user.firstName }} {{ user.lastName }} :</h5></div>
+                            <div class="card-body">
+                            <h5 class="card-title">Tel : {{ user.phoneNumber }}</h5>
+                            <p class="card-text">Adresse Mail : {{ user.email }}</p>
+                            </div>
+                     </div>  
+              </div>
+              <div class="col-md-4">
+                     <h5 class="h2">Fidélité / Remise cumulé:</h5>
+                     <strong>{{ user.reduction }} &euro;</strong> à valoir sur l'enssemble des prestations
+              </div>
+              <div class="col-md-2">&nbsp;</div>
+        </div>
+ </div>
+       
+{% endblock %}
+

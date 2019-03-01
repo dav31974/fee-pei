@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification de la reduction client{% endblock %}
+
+{% block body %}
+
+    <div class="container py-3">
+        <h4 class="text-center">Modification de la reduction client : {{ user.firstName }} <strong>{{ user.lastName }}</strong></h4>
+
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <button type="submit" class="btn btn-primary">Valider la somme ajoutée
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
