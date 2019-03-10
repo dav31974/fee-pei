@@ -115,7 +115,7 @@ class ProductController extends AbstractController
     public function contact()
     {
         $photoa = "/image/visite-attente.jpg";
-        $photob = "/image/visagecarroussecond.jpg";
+        $photob = "/image/visite-attente-b.jpg";
         $titrea = "Bienvenue Chez La Fée Péi";
         $phrasea = "115, Rue François-Isautier SAINT-PIERRE";
         $titreb = "";

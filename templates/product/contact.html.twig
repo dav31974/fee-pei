@@ -6,6 +6,25 @@
 {% include 'product/_cover_product.html.twig' %}
 
  <div class="container text-center">
+
+    <ul class="navbar-nav mr-auto mt-5">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('products_regard') }}">Soins du Regard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('products_visage') }}">Soins du Visage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('products_corps') }}">Soins du Corps</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('products_epilation') }}">Epilation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ path('products_boutique') }}">Boutique</a>
+      </li>
+    </ul>
+
     <h4 class="text-center my-5">Contact / Visite</h4>
     <div class="bloclogcontact mb-5">
         <a href="tel:0692771003"><img src="/image/log-tel-contact.png" alt="logo telephone"></a>
